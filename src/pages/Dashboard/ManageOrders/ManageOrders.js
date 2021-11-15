@@ -12,12 +12,8 @@ const ManageOrders = () => {
     const [AllOrders, setAllOrders] = useState([]);
 
     useEffect(() => {
-        const url = `https://peaceful-sea-78260.herokuapp.com/purchase`;
-        fetch(url, {
-            headers: {
-                'authorization': `Bearer ${token}`
-            }
-        })
+        const url = `https://peaceful-sea-78260.herokuapp.com/purchase`
+        fetch(url)
             .then(res => res.json())
             .then(data => setAllOrders(data));
     });

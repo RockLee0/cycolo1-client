@@ -88,7 +88,6 @@ const Navigation = () => {
               
               :
              <>
-             <Link to="/Addcycle" style={{textDecoration:'none' ,color:'white'}}> <Button  color="inherit">Add cycle</Button>  </Link>
               <Link style={{textDecoration:'none' ,color:'white'}} to="/login"><Button  color="inherit">Login </Button> </Link>
              </>
               
