@@ -8,7 +8,7 @@ const MyOrders = () => {
     const [myOrders, setMyOrders] = useState([])
 
     useEffect(() => {
-        const url = `http://localhost:5000/purchase?Email=${user.email}`
+        const url = `https://peaceful-sea-78260.herokuapp.com/purchase?Email=${user.email}`
         fetch(url, {
             headers: {
                 'authorization': `Bearer ${token}`

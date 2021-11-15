@@ -19,7 +19,7 @@ const Explore = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/cycles')
+        fetch('https://peaceful-sea-78260.herokuapp.com/cycles')
             .then(res => res.json())
             .then(data => setCycles(data));
     }, [])

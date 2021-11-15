@@ -17,7 +17,7 @@ const Purchase = () => {
     const {user}=useAuth();
 // get the information through id 
     useEffect(()=>{
-        fetch(`http://localhost:5000/cycles/${cycleId}`)
+        fetch(`https://peaceful-sea-78260.herokuapp.com/cycles/${cycleId}`)
         .then(res=>res.json())
         .then(data=>setCycle(data));
     },[])
@@ -29,7 +29,7 @@ const Purchase = () => {
 
     const onSubmit = data => {
 
-        axios.post('http://localhost:5000/purchase', data)
+        axios.post('https://peaceful-sea-78260.herokuapp.com/purchase', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Product added successfully');

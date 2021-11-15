@@ -10,7 +10,7 @@ const AddCycle = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('http://localhost:5000/cycles', data)
+        axios.post('https://peaceful-sea-78260.herokuapp.com/cycles', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Product added successfully');
