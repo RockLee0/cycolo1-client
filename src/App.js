@@ -14,6 +14,8 @@ import Payment from './pages/Dashboard/Payment/Payment';
 import Review from './pages/Dashboard/Review/Review';
 import MakeAdmin from './pages/Dashboard/MakeAdmin/MakeAdmin';
 import MyOrders from './pages/Dashboard/MyOrders/MyOrders';
+import ManageOrders from './pages/Dashboard/ManageOrders/ManageOrders';
+import ManageReviews from './pages/Dashboard/ManageReviews/ManageReviews';
 
 
 
@@ -64,6 +66,12 @@ function App() {
         </PrivateRoute>
         <PrivateRoute exact path="/myorders">
         <MyOrders></MyOrders>
+        </PrivateRoute>
+        <PrivateRoute exact path="/ManageOrders">
+        <ManageOrders></ManageOrders>
+        </PrivateRoute>
+        <PrivateRoute exact path="/ManageReviews">
+        <ManageReviews></ManageReviews>
         </PrivateRoute>
         </Switch>
         
