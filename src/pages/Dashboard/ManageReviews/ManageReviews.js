@@ -23,8 +23,8 @@ const ManageReviews = () => {
          <Navigation></Navigation>
            {
                reviews.map(review=><>
-               <li>{review.review}</li>
-               <Button variant="contained"> Delete </Button>
+               <li>{review.review} <Button variant="contained"> Delete </Button> </li>
+              
                </>)
            } 
         </div>

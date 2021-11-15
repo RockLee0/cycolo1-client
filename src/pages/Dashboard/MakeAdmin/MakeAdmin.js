@@ -1,5 +1,6 @@
 import { Button, TextField, Alert } from '@mui/material';
 import React, { useState } from 'react';
+import Navigation from '../../Shared/Navigation/Navigation';
 import useAuth from './../../../hooks/useAuth';
 
 const MakeAdmin = () => {
@@ -32,6 +33,7 @@ const MakeAdmin = () => {
     }
     return (
         <div>
+            <Navigation></Navigation>
             <h2>Make an Admin</h2>
             <form onSubmit={handleAdminSubmit}>
                 <TextField
