@@ -1,4 +1,4 @@
-import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
+import { Button, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../../hooks/useAuth';
 import Navigation from '../../Shared/Navigation/Navigation';
@@ -9,7 +9,7 @@ const ManageOrders = () => {
 
     
     const { user, token } = useAuth();
-    const [myOrders, setMyOrders] = useState([]);
+    const [AllOrders, setAllOrders] = useState([]);
 
     useEffect(() => {
         const url = `https://peaceful-sea-78260.herokuapp.com/purchase`
@@ -19,7 +19,7 @@ const ManageOrders = () => {
             }
         })
             .then(res => res.json())
-            .then(data => setMyOrders(data));
+            .then(data => setAllOrders(data));
     });
     return (
         <div>
@@ -34,10 +34,11 @@ const ManageOrders = () => {
             <TableCell align="right">Quantity</TableCell>
             <TableCell align="right">Preference</TableCell>
             <TableCell align="right">Place</TableCell>
+            <TableCell align="right">Cancellation</TableCell>
           </TableRow>
                     </TableHead>
                     <TableBody>
-                        {myOrders.map((row) => (
+                        {AllOrders.map((row) => (
                             <TableRow
                                 key={row._id}
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -51,7 +52,7 @@ const ManageOrders = () => {
                                 <TableCell align="right">{row.quantity}</TableCell>
                                 <TableCell align="right">{row.preference}</TableCell>
                                 <TableCell align="right">{row.place}</TableCell>
-
+                                <Button variant="contained"> Cancel </Button>
                             </TableRow>
                         ))}
                     </TableBody>

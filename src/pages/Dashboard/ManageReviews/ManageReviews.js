@@ -1,4 +1,4 @@
-import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
+import { Button, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../../hooks/useAuth';
 import Navigation from '../../Shared/Navigation/Navigation';
@@ -20,8 +20,12 @@ const ManageReviews = () => {
     });
     return (
         <div>
+         <Navigation></Navigation>
            {
-               reviews.map(review=><li>{review.review}</li>)
+               reviews.map(review=><>
+               <li>{review.review}</li>
+               <Button variant="contained"> Delete </Button>
+               </>)
            } 
         </div>
     );
