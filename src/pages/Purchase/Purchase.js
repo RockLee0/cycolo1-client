@@ -58,7 +58,7 @@ const Purchase = () => {
 
          <form onSubmit={handleSubmit(onSubmit)} >
                 <TextField {...register("Email")} id="outlined-basic"  variant="outlined" value={user.email} />
-                <TextField {...register("Model")} id="outlined-basic" label="Input the Model name from above " variant="outlined" />
+                <TextField {...register("Model")} id="outlined-basic" variant="outlined" value={cycle.Model_Name} />
                 <TextField {...register("Number")} id="outlined-basic" label="Phone no" variant="outlined" />
                 <TextField {...register("quantity")} id="outlined-basic" label="Type your quantity of product" variant="outlined" />
                 <TextField {...register("preference")} id="outlined-basic" label="Which color do you want?" variant="outlined" />
