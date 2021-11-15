@@ -12,6 +12,8 @@ import AddCycle from './pages/Dashboard/AddCycle/AddCycle';
 import Dashboard from './pages/Dashboard/Dashboard/Dashboard';
 import Payment from './pages/Dashboard/Payment/Payment';
 import Review from './pages/Dashboard/Review/Review';
+import MakeAdmin from './pages/Dashboard/MakeAdmin/MakeAdmin';
+import MyOrders from './pages/Dashboard/MyOrders/MyOrders';
 
 
 
@@ -39,9 +41,12 @@ function App() {
         <Route exact  path="/register">
           <Register></Register>
         </Route>
-        <Route exact  path="/Addcycle">
-          <AddCycle></AddCycle>
+        <Route exact  path="/makeAdmin">
+        <MakeAdmin></MakeAdmin>
         </Route>
+        <PrivateRoute exact  path="/AddProduct">
+          <AddCycle></AddCycle>
+        </PrivateRoute>
         <PrivateRoute path="/purchase/:cycleId">
         <Purchase></Purchase>
         </PrivateRoute>
@@ -56,6 +61,9 @@ function App() {
         </PrivateRoute>
         <PrivateRoute exact path="/dashboard">
         <Dashboard></Dashboard>
+        </PrivateRoute>
+        <PrivateRoute exact path="/myorders">
+        <MyOrders></MyOrders>
         </PrivateRoute>
         </Switch>
         

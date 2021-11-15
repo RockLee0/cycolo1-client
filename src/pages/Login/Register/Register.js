@@ -23,7 +23,7 @@ const Register = () => {
             e.preventDefault();
             return 
         }
-        registerUser(loginData.email,loginData.password);
+        registerUser(loginData.email,loginData.password,loginData.name);
         alert('submitted');
 
         e.preventDefault();
@@ -51,6 +51,13 @@ const Register = () => {
         REGISTER 
       </Typography>
       {!isLoading && <form  onSubmit={handleLoginSubmit}>
+      <TextField
+                            sx={{ width: '75%', m: 1 }}
+                            id="standard-basic"
+                            label="Your Name"
+                            name="name"
+                            onBlur={handleOnchange}
+                            variant="standard" />
     <TextField
         sx={{ width: '75%', m: 1 }}
         id="standard-basic"
