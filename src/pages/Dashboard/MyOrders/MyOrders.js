@@ -23,11 +23,13 @@ const MyOrders = () => {
             <TableContainer component={Paper}>
                 <Table sx={{}} aria-label="Appointments table">
                     <TableHead>
-                        <TableRow>
-                            <TableCell>Product Name</TableCell>
-                            
-                            <TableCell align="right">Quantity </TableCell>
-                        </TableRow>
+                    <TableRow>
+            <TableCell align="right">Model</TableCell>
+            <TableCell align="right">Number</TableCell>
+            <TableCell align="right">Quantity</TableCell>
+            <TableCell align="right">Preference</TableCell>
+            <TableCell align="right">Place</TableCell>
+          </TableRow>
                     </TableHead>
                     <TableBody>
                         {myOrders.map((row) => (
@@ -38,7 +40,11 @@ const MyOrders = () => {
                                 <TableCell component="th" scope="row">
                                     {row.Model}
                                 </TableCell>
+                        
+                                <TableCell align="right">{row.Number}</TableCell>
                                 <TableCell align="right">{row.quantity}</TableCell>
+                                <TableCell align="right">{row.preference}</TableCell>
+                                <TableCell align="right">{row.place}</TableCell>
 
                             </TableRow>
                         ))}
